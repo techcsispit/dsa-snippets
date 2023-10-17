@@ -20,7 +20,7 @@ Here are the steps to get started:
 2. Clone your fork to your local machine:
 
 ```bash
-git clone https://github.com/your-username/data-structures-algorithms-snippets.git
+git clone https://github.com/your-username/dsa-sinppets.git
 ```
 
 3. Choose a language (C++ or Java) - Python is already populated for you- and create a new directory for your snippet.
@@ -50,7 +50,7 @@ git push origin main
 
 You can contribute in the following ways:
 
-- **Add new snippets**: Implement missing data structures and algorithms in Python, C++, or Java.
+- **Add new snippets**: Implement missing data structures and algorithms in C++ or Java.
 - **Improve existing snippets**: Enhance the documentation, performance, or readability of existing code.
 - **Code reviews**: Help review pull requests from other contributors.
 - **Testing and validation**: Verify the correctness of existing snippets and suggest improvements.
