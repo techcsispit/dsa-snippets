@@ -39,29 +39,7 @@ public class Longest_Palindromic_Substring {
                 c--;
                 max--;
             }
-        }
-        //System.out.println(lps+"\n");
-        while(isPalindrome(lps) == false){
-            lps="";
-            int temp=0;
-            for(int i=0;i<X.length();i++){
-                for(int j=0;j<Y.length();j++){
-                    if(t[i][j]>max&&t[i][j]!=max1){
-                        max=t[i][j];
-                        r=i;
-                        c=j;
-                    }
-                }
-            }
-            while(t[r][c]!=0){
-                if(t[r-1][c-1] ==max-1){
-                    lps+=X.charAt(--r);
-                    c--;
-                    max--;
-                }
-            }
-            max1=max;
-        }
+        } 
         return lps;
     }
 
@@ -73,7 +51,6 @@ public class Longest_Palindromic_Substring {
 
     public static void main(String[] args) {
         Longest_Palindromic_Substring ob=new Longest_Palindromic_Substring();
-        System.out.println(ob.longestPalindrome("aacabdkacaa"));
-        System.out.println(ob.longestPalindrome("aacdefcaa"));
+        System.out.println(ob.longestPalindrome("babad"));
     }
 }
