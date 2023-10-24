@@ -1,7 +1,7 @@
 /*Self-curated problem: Given a string of brackets, check whether the brackets are perfectly closed or not
-    Example 1: ()()(())  Brackets are perfectly closed
-    Example 2: )))))((((( Brackets aren't perfectly closed
-    Example 3: ( Brackets aren't perfectly closed
+    Example 1: "()()(())"  Brackets are perfectly closed
+    Example 2: ")))))(((((" Brackets aren't perfectly closed
+    Example 3: "(" Brackets aren't perfectly closed
 */
 import java.util.Scanner;
 
