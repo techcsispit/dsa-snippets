@@ -8,3 +8,5 @@ This is a list of links to books that may be useful for algorithms and data stru
 
 - https://drive.google.com/open?id=1sBSGJ8gUakcn0NuQam4BRhRCQfsTrrwh
 
+- https://drive.google.com/file/d/1cqr0gl2kqiTHDrnNVDexd6aqjsKZkyPT/view?usp=sharing
+
