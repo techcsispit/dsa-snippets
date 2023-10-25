@@ -1,5 +1,3 @@
-package Stormlight;
-
 import java.util.Scanner;
 
 public class Size_of_squares {
