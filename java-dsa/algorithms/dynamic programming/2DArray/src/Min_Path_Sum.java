@@ -1,5 +1,17 @@
 //link to the problem statement: https://leetcode.com/problems/minimum-path-sum/
 
+/*Solution explanation: You create an array t which stores the minimum sum at a given index in inverted order. i.e. for
+ * grid[m-1][n-1] the min sum will be stored in t array at 0,0 index. Once you initialize t[][] with the dimensions, you 
+ * traverse through the last column from bottom to top while adding up all the integers and storing them top-down in t[][].
+ * For example, min sum at grid[m-2][n-1] is stored at t[1][0] etc. Keep doing the same for the last horizontal row of grid.
+ * 
+ *   Once the first row and first columnn of t array are filled, now try to fill all the other cells row wise. For t[1][1],
+ * this can be done by comparing t[1][0] and t[0][1] and finding the minimum amongst them before adding the current value
+ * at grid[m-2][n-2]. Hence, in a general way, at t[i][j], we can compare t[i][j-1] and t[i-1][j] before adding the coin-
+ * cidental value in grid array to the minimum amongst those. Value at t[m-1][n-1] is the answer.
+ */
+
+
 import java.util.Scanner;
 
 public class Min_Path_Sum {
@@ -26,7 +38,7 @@ public class Min_Path_Sum {
         }
         for(int i=1;i<m;i++){
             for(int j=1;j<n;j++){
-                t[i][j]=Math.min(t[i-1][j]+grid[m-2-(i-1)][n-2-(j-1)],t[i][j-1]+grid[m-2-(i-1)][n-2-(j-1)]);
+                t[i][j]=Math.min(t[i-1][j],t[i][j-1])+grid[m-2-(i-1)][n-2-(j-1)];
             }
         }
         return t[m-1][n-1];
