@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+void swap(int a, int b){
+    int temp;
+    temp = a;
+    a = b;
+    b =temp;
+}
+int partition(int arr[],int lb, int ub){
+    int pivot = arr[0];
+    while(lb<ub){
+        while(arr[lb]<pivot){
+            lb++;
+        }
+        while(arr[ub]>pivot){
+            ub--;
+        }
+        if(lb<ub){
+            swap(arr[lb],arr[ub]);
+        }
+    }
+    swap(arr[pivot],arr[ub]);
+    return ub;
+}
+void QuickSort(int arr[],int lb,int ub){
+    if(lb<ub){
+    int loc = partition(arr,lb,ub);
+    QuickSort(arr,lb,loc-1);
+    QuickSort(arr,loc+1,ub);
+    }
+}
+int main()
+{
+    printf("Quick Sort (Shasvat Shah)\n");
+    int arr[] = {87,34,56,88,34,90,99};
+    QuickSort(arr,0,6);
+    printf("Elements are : ");
+    for(int i = 0;i<7;i++){
+        printf("%d \t",arr[i]);
+    }
+    return 0;
+}
+
