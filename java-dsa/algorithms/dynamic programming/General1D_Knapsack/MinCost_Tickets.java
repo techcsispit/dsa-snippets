@@ -1,5 +1,19 @@
 //link to the problem statement: https://leetcode.com/problems/minimum-cost-for-tickets/
 
+/*Solution explanation: Here we are given an array of n days during which we are going to travel. We can buy a ticket whenever
+ * we are travelling during a listed(day number is present in days[]) day. Hence, to avail everything at minimum cost, our 
+ * choice diagram looks something like this:
+ * 1] If our control variable for present day is present in days[], calculate min_cost for travel assuming we buy any of the 
+ * three tickets given in costs[] on that particular day.
+ * 2] If our control variable for present day is currently an unlisted day, increment it till we reach a day listed in days array
+ * 3] If our control variable for day numeber is greater than the final value in days[] array, we return 0 as we do not need 
+ * to purchase any tickets for this period. 
+ * Using the technique of memoization, we store the min cost for that listed day along with the day number in an hashmap. 
+ * Lastly, whenever our control variable for day number is identical to a key stored in the hashmap, we return the min
+ * cost associated with that key.
+ *  
+ */
+
 import java.util.*;
 
 public class MinCost_Tickets {
